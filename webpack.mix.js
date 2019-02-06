@@ -11,5 +11,22 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+mix.js(
+    [
+        'resources/js/app.js',
+        'resources/vendor/jquery-migrate/jquery-migrate.min.js',
+        'resources/vendor/popper.js/popper.min.js',
+        'resources/vendor/bootstrap/bootstrap.min.js',
+        'resources/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+        'resources/vendor/jquery-mousewheel/jquery.mousewheel.min.js'
+    ],
+    'public/js/app.js'
+);
+
+mix.copy('resources/vendor/chart.js/Chart.min.js', 'public/js/Chart.min.js');
+
+mix.sass('resources/sass/app.scss', 'public/css');
+
+if (mix.inProduction()) {
+    mix.version();
+}
