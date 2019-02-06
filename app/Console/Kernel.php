@@ -26,6 +26,12 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        // Retry failed jobs every hour
+        $schedule->command('queue:retry all')->hourly();
+
+        // Flush failed jobs every week
+        $schedule->command('queue:flush')->weekly()->sundays()->at('3:00');
     }
 
     /**
@@ -35,7 +41,7 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__ . '/Commands');
 
         require base_path('routes/console.php');
     }

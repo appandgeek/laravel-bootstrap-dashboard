@@ -1,73 +1,97 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@include('includes.head')
+<body>
+    <main class="container-fluid w-100" role="main">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center bg-white mnh-100vh">
+                <a class="u-login-form py-3 mb-auto" href="/">
+                    <img class="img-fluid" src="/img/logo.png" width="160" alt="Stream Dashboard UI Kit">
+                </a>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                <div class="u-login-form">
+                    <form class="mb-3" method="POST" action="{{ route('login') }}">
                         @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                        <div class="mb-3">
+                            <h1 class="h2">Welcome Back!</h1>
+                            <p class="small">Login with your social account.</p>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        <div class="d-flex my-4">
+                            <a class="btn btn-sm btn-dark px-3 mr-2" href="#">
+                                <i class="fab fa-github mr-1"></i> Login with Github
+                            </a>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                            <a class="btn btn-sm btn-danger px-3" href="#">
+                                <i class="fab fa-google mr-1"></i> Login with Google
+                            </a>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <p class="small">Or Login with your registered email address and password.</p>
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
+                        <div class="form-group mb-4">
+                            <label for="email">Your email</label>
+                            <input id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" type="email" placeholder="" value="{{ old('email') }}" required autofocus>
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
+                        <div class="form-group mb-4">
+                            <label for="password">Password</label>
+                            <input id="password" class="form-control" name="password" type="password" placeholder="" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" >
+                            @if ($errors->has('password'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+                            @endif
+                        </div>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                        <div class="form-group d-flex justify-content-between align-items-center mb-4">
+                            <div class="custom-control custom-checkbox">
+                                <input id="remember" class="custom-control-input" name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
+                                <label class="custom-control-label" for="remember">Remember me</label>
+                            </div>
+
+                            @if (Route::has('password.request'))
+                                    <a class="link-muted small" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
-                            </div>
+                            @endif
                         </div>
+
+                        <button class="btn btn-primary btn-block" type="submit">Login</button>
                     </form>
+
+                    <p class="small">
+                        Don’t have an account? <a href="{{ url('/register') }}">Sign Up here</a>
+                    </p>
+                </div>
+
+                <div class="u-login-form text-muted py-3 mt-auto">
+                    <small><i class="far fa-question-circle mr-1"></i> If you are not able to sign in, please <a href="#">contact us</a>.</small>
                 </div>
             </div>
+
+            <div class="col-lg-6 d-none d-lg-flex flex-column align-items-center justify-content-center bg-light">
+                <img class="img-fluid position-relative u-z-index-3 mx-5" src="{{ asset('/svg/mockups/mockup.svg') }}" alt="Image description">
+
+                <figure class="u-shape u-shape--top-right u-shape--position-5">
+                    <img src="{{ asset('/svg/shapes/shape-1.svg') }}" alt="Image description">
+                </figure>
+                <figure class="u-shape u-shape--center-left u-shape--position-6">
+                    <img src="{{ asset('/svg/shapes/shape-2.svg') }}" alt="Image description">
+                </figure>
+                <figure class="u-shape u-shape--center-right u-shape--position-7">
+                    <img src="{{ asset('/svg/shapes/shape-3.svg') }}" alt="Image description">
+                </figure>
+                <figure class="u-shape u-shape--bottom-left u-shape--position-8">
+                    <img src="{{ asset('/svg/shapes/shape-4.svg') }}" alt="Image description">
+                </figure>
+            </div>
         </div>
-    </div>
-</div>
-@endsection
+    </main>
+</body>
+</html>

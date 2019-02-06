@@ -1,14 +1,22 @@
+// Bootstrap setup
+@import '../../node_modules/bootstrap/scss/functions';
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Stream setup
+@import 'stream/variables';
 
-// Variables
-@import 'variables';
+// Custom setup
+@import 'user-variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Bootstrap core
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+/*----------------------------------------------------------------------
+  * Stream - Responsive Website Template
+  * Copyright 2018 Htmlstream
+  * Licensed under Bootstrap Themes (https://themes.getbootstrap.com/licenses/)
+------------------------------------------------------------------------*/
+
+@import 'stream/stream';
+
+// Custom core
+@import 'user';
