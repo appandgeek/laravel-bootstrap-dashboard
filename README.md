@@ -8,4 +8,4 @@ Find out more [free Laravel themes at getstartlaravel.com](https://getstartlarav
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The is licensed under the [MIT license](https://opensource.org/licenses/MIT).
