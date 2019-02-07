@@ -12,6 +12,25 @@ Start your development with a Bootstrap 4 Dashboard built for Laravel 5.7 and up
 
 ## Installation
 
+1. Clone this project or Download that ZIP file and extract it
+2. Make sure you have Node.js and NPM installed globally
+3. Goto project-directory
+4. copy .env.sample to .env
+5. Update .env with your database details
+6. Set write permission to storage folder
+7. On the command prompt run the following commands
+
+```bash
+    composer install
+    npm install
+    php artisan migrate
+    php artisan db:seed
+    npm run dev
+    php artisan serve
+```
+
+## Deployment
+
 ## Credits
 
 -   [Htmlstream](https://htmlstream.com/templates/stream-dashboard-ui-kit) for the free Bootstrap theme
