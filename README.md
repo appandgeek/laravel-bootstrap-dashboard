@@ -4,7 +4,7 @@
 
 This project is a port of the Free Bootstrap Dashboard Theme "Stream - Bootstrap 4 Dashboard UI Kit" to Laravel.
 
-[Simple, fast routing engine](https://laravel.com/docs/routing).
+Find out more [free Laravel themes at getstartlaravel.com](https://getstartlaravel.com/template/all).
 
 ## License
 
