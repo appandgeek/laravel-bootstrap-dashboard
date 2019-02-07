@@ -1,6 +1,6 @@
 # Laravel Bootstrap Dashboard
 
-Start your development with a Bootstrap 4 Dashboard built for Laravel 5.7 and up. This is fully coded "front end + back end" solution for your next Laravel project. It features many components that can help you create amazing dashboard applications.
+Start your development with a Bootstrap 4 Dashboard built for Laravel 5.7 and up. This is fully coded "front end + back end" solution to kick start your next Laravel project. It features many components that can help you create amazing dashboard applications.
 
 ## Features
 
@@ -15,7 +15,7 @@ Start your development with a Bootstrap 4 Dashboard built for Laravel 5.7 and up
 1. Clone this project or download ZIP file and extract it
 2. Make sure you have Node.js and NPM installed globally
 3. Goto Project Directory
-4. Copy .env.sample to .env
+4. Copy .env.example to .env
 5. Update .env with your database details
 6. Set write permission to storage folder
 7. On the command prompt run the following commands
