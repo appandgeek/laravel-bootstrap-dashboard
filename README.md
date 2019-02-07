@@ -1,6 +1,6 @@
 
 
-## About GetStartLaravel
+# Bootstrap 4 Dashboard UI Kit 
 
 This project is a port of the Free Bootstrap Dashboard Theme "Stream - Bootstrap 4 Dashboard UI Kit" to Laravel.
 
