@@ -172,7 +172,7 @@
                                         </div>
 
                                         <p class="text-truncate mb-0" style="max-width: 250px;">
-                                            <span class="text-primary">@htmlstream</span> just liked your post!
+                                            <span class="text-primary">@appandgeek</span> just liked your post!
                                         </p>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
                                         </div>
 
                                         <p class="text-truncate mb-0" style="max-width: 250px;">
-                                            <span class="text-primary">@htmlstream</span> commented in your post.
+                                            <span class="text-primary">@appandgeek</span> commented in your post.
                                         </p>
                                     </div>
                                 </div>
