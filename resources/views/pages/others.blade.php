@@ -209,7 +209,7 @@
                 <div class="alert alert-soft-info fade show" role="alert">
                     <i class="fa fa-info-circle alert-icon mr-3"></i>
                     <span>
-                        For Tabs and Accordions examples please check out <a class="text-info font-weight-bold" href="./ui-cards.html">Cards page</a>.
+                        For Tabs and Accordions examples please check out <a class="text-info font-weight-bold" href="/cards">Cards page</a>.
                     </span>
                 </div>
             </div>

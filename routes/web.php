@@ -68,11 +68,6 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         return view('pages/profile');
     });
 
-    Route::get('/docs', function () {
-        return view('pages/docs');
-    });
-
-
     Route::get('/profile', function () {
         return view('pages/profile');
     });

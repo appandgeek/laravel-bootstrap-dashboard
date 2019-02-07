@@ -792,11 +792,13 @@
 
     <!-- Footer -->
     <footer class="u-footer d-md-flex align-items-md-center text-center text-md-left text-muted text-muted">
-        <p class="h5 mb-2 mb-md-0">More freebies on <a class="link-muted" href="https://htmlstream.com/" target="_blank">Htmlstream</a></p>
+        <p class="h5 mb-2 mb-md-0">More freebies on <a class="link-muted" href="https://getstartlaravel.com/" target="_blank">GetStartLaravel.com</a></p>
 
         <p class="h5 mb-0 ml-auto">
-            &copy; 2018 <a class="link-muted" href="https://htmlstream.com/" target="_blank">Htmlstream</a>. All Rights Reserved.
+            Bootstrap theme from <a class="link-muted" href="https://htmlstream.com/" target="_blank">Htmlstream</a>.
         </p>
     </footer>
     <!-- End Footer -->
+    <script src="{{ asset('/js/dashboard-page-scripts.js') }}"></script>
+
 @endsection

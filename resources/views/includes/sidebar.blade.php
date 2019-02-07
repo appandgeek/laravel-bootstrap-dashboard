@@ -120,15 +120,6 @@
 
                     <hr>
 
-                    <!-- Documentation -->
-                    <li class="u-sidebar-nav-menu__item">
-                        <a class="u-sidebar-nav-menu__link" href="{{ url('/docs') }}">
-                            <i class="far fa-newspaper u-sidebar-nav-menu__item-icon"></i>
-                            <span class="u-sidebar-nav-menu__item-title">Documentation</span>
-                        </a>
-                    </li>
-                    <!-- End Documentation -->
-
                     <!-- Free Download -->
                     <li class="u-sidebar-nav-menu__item">
                         <a class="u-sidebar-nav-menu__link" href="https://getstartlaravel.com/template/laravel-bootstrap-dashboard">

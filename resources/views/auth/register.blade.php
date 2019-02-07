@@ -15,6 +15,16 @@
                             <h1 class="h2">{{ __('Register') }}</h1>
                             <p class="small">It's free and hardly takes more than 30 seconds.</p>
                         </div>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
                         <div class="form-group mb-4">
                             <label for="name">{{ __('Name') }}</label>
                             <input id="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -54,7 +64,7 @@
                             </div>
                         </div>
                         <div class="custom-control custom-checkbox mb-4">
-                            <input id="terms" class="custom-control-input" name="terms" type="checkbox">
+                            <input id="terms" class="custom-control-input" name="terms" type="checkbox" required>
                             <label class="d-block custom-control-label" for="terms">I agree with <a href="#">terms &amp; conditions</a></label>
                         </div>
                         <button class="btn btn-primary btn-block" type="submit">{{ __('Register') }}</button>
