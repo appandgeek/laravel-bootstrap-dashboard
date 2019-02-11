@@ -23,6 +23,7 @@ Start your development with a Bootstrap 4 Dashboard built for Laravel 5.7 and up
 ```bash
     composer install
     npm install
+    php artisan key:generate
     php artisan migrate
     php artisan db:seed
     npm run dev

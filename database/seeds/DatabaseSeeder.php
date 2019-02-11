@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
         // Create default admin account
         $user = new User;
         $user->name = 'admin';
-        $user->email = 'admin@getstartlaravel.com';
+        $user->email = 'admin@laravelstrap.com';
         $user->password = bcrypt('password');
         $user->email_verified_at = now();
 
