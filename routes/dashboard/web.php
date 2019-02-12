@@ -63,5 +63,6 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         return view('pages/profile');
     });
 
+    Route::resource('users', 'UserController');
 });
 

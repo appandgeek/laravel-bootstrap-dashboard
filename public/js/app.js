@@ -43182,13 +43182,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/satheesh/workspace/freebies/laravel-bootstrap-dashboard/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/satheesh/workspace/freebies/laravel-bootstrap-dashboard/resources/vendor/jquery-migrate/jquery-migrate.min.js */"./resources/vendor/jquery-migrate/jquery-migrate.min.js");
-__webpack_require__(/*! /Users/satheesh/workspace/freebies/laravel-bootstrap-dashboard/resources/vendor/bootstrap/bootstrap.min.js */"./resources/vendor/bootstrap/bootstrap.min.js");
-__webpack_require__(/*! /Users/satheesh/workspace/freebies/laravel-bootstrap-dashboard/resources/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js */"./resources/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js");
-__webpack_require__(/*! /Users/satheesh/workspace/freebies/laravel-bootstrap-dashboard/resources/vendor/chart.js/Chart.min.js */"./resources/vendor/chart.js/Chart.min.js");
-__webpack_require__(/*! /Users/satheesh/workspace/freebies/laravel-bootstrap-dashboard/resources/vendor/validator.js */"./resources/vendor/validator.js");
-module.exports = __webpack_require__(/*! /Users/satheesh/workspace/freebies/laravel-bootstrap-dashboard/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\laravel-bootstrap-dashboard\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\laragon\www\laravel-bootstrap-dashboard\resources\vendor\jquery-migrate\jquery-migrate.min.js */"./resources/vendor/jquery-migrate/jquery-migrate.min.js");
+__webpack_require__(/*! C:\laragon\www\laravel-bootstrap-dashboard\resources\vendor\bootstrap\bootstrap.min.js */"./resources/vendor/bootstrap/bootstrap.min.js");
+__webpack_require__(/*! C:\laragon\www\laravel-bootstrap-dashboard\resources\vendor\malihu-custom-scrollbar-plugin\jquery.mCustomScrollbar.concat.min.js */"./resources/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js");
+__webpack_require__(/*! C:\laragon\www\laravel-bootstrap-dashboard\resources\vendor\chart.js\Chart.min.js */"./resources/vendor/chart.js/Chart.min.js");
+__webpack_require__(/*! C:\laragon\www\laravel-bootstrap-dashboard\resources\vendor\validator.js */"./resources/vendor/validator.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\laravel-bootstrap-dashboard\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

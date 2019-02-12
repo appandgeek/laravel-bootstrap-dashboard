@@ -94,6 +94,41 @@
                         </ul>
                     </li>
                     <!-- End UI Components -->
+
+                    <!-- Start Adminstration Bar -->
+
+                    <li class="u-sidebar-nav-menu__item">
+                        <a class="u-sidebar-nav-menu__link" href="#!"
+                           data-target="#subMenu2">
+                            <i class="far fa-user-circle u-sidebar-nav-menu__item-icon"></i>
+                            <span class="u-sidebar-nav-menu__item-title">Administration</span>
+                            <i class="fa fa-angle-right u-sidebar-nav-menu__item-arrow"></i>
+                            <span class="u-sidebar-nav-menu__indicator"></span>
+                        </a>
+                        <ul id="subMenu2" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
+                            <li class="u-sidebar-nav-menu__item">
+                                <a class="u-sidebar-nav-menu__link" href="{{ url('dashboard/users') }}">
+                                    <i class="far fa-user u-sidebar-nav-menu__item-icon"></i>
+                                    <span class="u-sidebar-nav-menu__item-title">Users</span>
+                                </a>
+                            </li>
+                            <li class="u-sidebar-nav-menu__item">
+                                <a class="u-sidebar-nav-menu__link" href="{{ url('/dashboard/roles') }}">
+                                    <i class="far fa-tasks u-sidebar-nav-menu__item-icon"></i>
+                                    <span class="u-sidebar-nav-menu__item-title">Roles</span>
+                                </a>
+                            </li>
+                            <li class="u-sidebar-nav-menu__item">
+                                <a class="u-sidebar-nav-menu__link" href="{{ url('/dashboard/roles') }}">
+                                    <i class="far fa-lock u-sidebar-nav-menu__item-icon"></i>
+                                    <span class="u-sidebar-nav-menu__item-title">Permissions</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <!-- End Adminstration Bar -->
                     <hr>
 
                     <!-- Free Download -->
