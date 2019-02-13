@@ -6,10 +6,21 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use App\Services\UserService;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Session;
+
 
 
 class UserController extends Controller
 {
+
+    public function __construct(UserService $users)
+    {
+        $this->middleware(['auth']);
+        $this->users = $users;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,6 +30,7 @@ class UserController extends Controller
     {
         $users = User::orderBy('id', 'ASC')->paginate(8);
         return view('dashboard.users.users_list', compact('users'));
+
     }
 
     /**
@@ -28,7 +40,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        echo "Herer";
     }
 
     /**
@@ -39,7 +51,25 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email|unique:users',
+            'name' => 'required|string|max:50',
+            'password' => 'required|min:6'
+        ]);
+
+        if ($validator->fails()) {
+            Session::flash('error', $validator->messages()->first());
+            return redirect()->back()->with('warning', 'There was error in creating new user.');
+        }
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        return redirect()->back()->with(
+            'success',
+            'User successfully Added.'
+        );
     }
 
     /**
@@ -50,7 +80,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        echo "hello";
     }
 
     /**
@@ -61,7 +91,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = $this->users->getUserInfo($id);
+        return view('dashboard.users.edit_user', compact('user'));
     }
 
     /**
@@ -73,7 +104,35 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user_details = $this->users->getUserInfo($id);
+
+
+        if ($request->email == $user_details->email) {
+            $validator = Validator::make($request->all(), [
+                'email' => 'required|email',
+                'name' => 'required|string|max:50',
+                'password' => 'required|min:6'
+            ]);
+        } else {
+            $validator = Validator::make($request->all(), [
+                'email' => 'required|email|unique:users',
+                'name' => 'required|string|max:50',
+                'password' => 'required|min:6'
+            ]);
+        }
+
+
+        if ($validator->fails()) {
+            Session::flash('error', $validator->messages()->first());
+            return redirect()->back()->with('warning', 'There was error in creating new user.');
+        }
+
+        $user_details->name = $request->name;
+        $user_details->email = $request->email;
+        $user_details->password = Hash::make($request->password);
+        $user_details->save();
+
+        return redirect()->back()->with('success', 'User updated successfully!!.');
     }
 
     /**
@@ -97,5 +156,14 @@ class UserController extends Controller
             'success',
             'User successfully deleted.'
         );
+    }
+
+    public function search(Request $request)
+    {
+        $term = $request->id;
+        $users = User::where('name', 'like', '%' . $term . '%')->paginate(8);
+        $users->appends(['id' => $term]);
+        return view('dashboard.users.users_search_result', compact('users'));
+        //return response($users);
     }
 }
