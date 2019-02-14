@@ -14,9 +14,6 @@
                             @endforeach
                            
                         </div>
-                        
-                            
-                   
         
                 <div class="card-header">
                    <div class="float-left">
@@ -27,8 +24,6 @@
                    </div>
                    
                 </div>
-
-               
 
                 <div class="card-body">
                         <div class="table-responsive">
@@ -82,15 +77,15 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="userName">Name:</label>
-                                    <input type="text" name="name" class="form-control" id="userName">
+                                    <input type="text" name="name" class="form-control" id="userName" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="userEmail">Email:</label>
-                                    <input type="email" name="email" class="form-control" id="userEmail">
+                                    <input type="email" name="email" class="form-control" id="userEmail" required>
                                 </div>
                                 <div class="form-group">
                                         <label for="userPassword">Password:</label>
-                                        <input type="password" name="password" class="form-control" id="userPassword">
+                                        <input type="password" name="password" class="form-control" id="userPassword" required>
                                     </div>
                             
                         </div>
@@ -99,7 +94,7 @@
                         <div class="modal-footer">
                         <input type="submit" class="btn btn-success" value="Add">
                     </form>
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">Create</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                         </div>
                   
                       </div>
@@ -121,8 +116,8 @@
                             data: {'id': term},
                             success: function(resp)
                             {
-                                $('.table-responsive').empty().append(resp);
-                                
+                             $('.table-responsive').empty().append(resp);
+                                                               
                             },
                             error: function(error)
                             {

@@ -1,3 +1,4 @@
+
 <table class="table table-hover" id="usersTable">
         <thead>
             <tr>
@@ -29,4 +30,4 @@
            
         </tbody>
     </table>
-    {{-- {{ $users->render()  }} --}}
+    {{ $users->render()  }}

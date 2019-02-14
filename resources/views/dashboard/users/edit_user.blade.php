@@ -1,7 +1,19 @@
 @extends('layouts.dashboard')
-
+    @section('style')
+    <style>
+        .card-center{
+            margin: 0 auto; /* Added */
+            float: none; /* Added */
+            margin-top: 5%; /* Added */
+        }
+        </style>
+    @endsection
     @section('content')
-        <div class="card">
+    <div class="col-md-8 mb-6 card-center">
+        <div class="card ">
+            <header class="card-header">
+                Update User
+            </header>
                 <div class="flash-message">
                         @foreach (['danger', 'warning', 'success', 'info'] as $msg)
                             @if(Session::has($msg))
@@ -19,15 +31,7 @@
                     {!! Form::open(['method' => 'PUT', 'url' => ['/dashboard/users', $user->id]]) !!}
             
                     @csrf
-                    @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
+                       
                         <div class="form-group">
                                     <label for="userName">Name:</label>
                                     <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="userName" value="{{ $user->name }}" >
@@ -48,17 +52,17 @@
                                 </div>
                                 <div class="form-group">
                                         <label for="userPassword">Password:</label>
-                                        <input type="password" name="password" class="form-control" id="userPassword">
+                                        <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" id="userPassword">
                                         @if ($errors->has('password'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('password') }}</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
                                     @endif
                                 </div>
-                                <input type="submit" class="btn btn-success" value="Update">
+                                <input type="submit" class="btn btn-success float-right" value="Update">
                         </div>
                     {!! Form::close() !!}
             </div>
         </div>
-        
+    </div>  
     @endsection

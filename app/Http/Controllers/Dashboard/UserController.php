@@ -123,8 +123,7 @@ class UserController extends Controller
 
 
         if ($validator->fails()) {
-            Session::flash('error', $validator->messages()->first());
-            return redirect()->back()->with('warning', 'There was error in creating new user.');
+            return redirect()->back()->with('errors', $validator->messages());
         }
 
         $user_details->name = $request->name;
@@ -163,6 +162,7 @@ class UserController extends Controller
         $term = $request->id;
         $users = User::where('name', 'like', '%' . $term . '%')->paginate(8);
         $users->appends(['id' => $term]);
+
         return view('dashboard.users.users_search_result', compact('users'));
         //return response($users);
     }
