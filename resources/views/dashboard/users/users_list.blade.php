@@ -1,6 +1,10 @@
 @extends('layouts.dashboard')
 
     @section('content')
+    <div class="u-content">
+        <div class="u-body">
+            <h2 class="h2 font-weight-semibold mb-4">Users</h2>
+            <div class="card mb-4">
             <div class="card">
                     <div class="flash-message">
                             @foreach (['danger', 'warning', 'success', 'info'] as $msg)
@@ -20,7 +24,7 @@
                         <a data-toggle="modal" href="#exampleModal" class="btn btn-success"> <i class="fa fa-plus-circle"></i> Add User</a>
                    </div>
                    <div class="float-right">
-                        <label for="searchUser" >Search:</label> <input type="text" name="name" id="searchUser"  placeholder="search user">
+                        <input type="text" name="name" class="form-control" id="searchUser"  placeholder="search user">
                    </div>
                    
                 </div>
@@ -102,7 +106,9 @@
                   </div>
             <!-- End Basic Modals -->
             </div>
-            
+            </div>
+        </div>
+        </div>
            
             <script>
 

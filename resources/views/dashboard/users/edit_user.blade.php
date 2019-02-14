@@ -9,7 +9,10 @@
         </style>
     @endsection
     @section('content')
-    <div class="col-md-8 mb-6 card-center">
+    <div class="u-content">
+            <div class="u-body">
+            <h2 class="h2 font-weight-semibold mb-4">Users</h2>
+            <div class="card mb-4">
         <div class="card ">
             <header class="card-header">
                 Update User
@@ -64,5 +67,7 @@
                     {!! Form::close() !!}
             </div>
         </div>
-    </div>  
+    </div>
+    </div>
+</div>  
     @endsection

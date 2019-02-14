@@ -63,8 +63,10 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         return view('pages/profile');
     });
     Route::get('users/search', 'UserController@search');
+    Route::get('roles/search', 'RolesController@search');
     Route::resource('users', 'UserController');
     Route::resource('roles', 'RolesController');
+    Route::resource('permission', 'PermissionController');
 
 });
 

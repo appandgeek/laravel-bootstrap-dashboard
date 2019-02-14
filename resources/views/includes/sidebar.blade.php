@@ -119,7 +119,7 @@
                                 </a>
                             </li>
                             <li class="u-sidebar-nav-menu__item">
-                                <a class="u-sidebar-nav-menu__link" href="{{ url('/dashboard/roles') }}">
+                                <a class="u-sidebar-nav-menu__link" href="{{ url('/dashboard/permission') }}">
                                     <i class="far fa-lock u-sidebar-nav-menu__item-icon"></i>
                                     <span class="u-sidebar-nav-menu__item-title">Permissions</span>
                                 </a>

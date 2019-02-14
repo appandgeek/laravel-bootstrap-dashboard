@@ -1,9 +1,13 @@
 @extends('layouts.dashboard')
     @section('content')
-
+    <div class="u-content">
+            <div class="u-body">
+            <h2 class="h2 font-weight-semibold mb-4">Roles</h2>
+            <div class="card mb-4">
         <div class="card">
             <header class="card-header">
-
+                    <h3> Edit Role: <i>{{ $role->name }}</i></h3>
+                    <a class="btn btn-primary float-right" href="/dashboard/roles">Roles</a>
             </header>
             <div class="card-body">
                     {{ Form::model($role, array('route' => array('roles.update', $role->id), 'method' => 'PUT')) }}
@@ -22,7 +26,7 @@
                             <button type="submit" class="btn btn-success btn-save"><i class="fa fa-save"> </i>
                                 Save
                             </button>
-                            <a href="/roles" class="btn btn-danger btn-cancel"><i
+                            <a href="/dashboard/roles" class="btn btn-danger btn-cancel"><i
                                         class="fa fa-times-circle"></i> Cancel
                             </a>
                         </div>
@@ -30,4 +34,7 @@
                     {{ Form::close() }}
             </div>
         </div>
+            </div>
+            </div>
+    </div>
     @endsection

@@ -131,4 +131,14 @@ class RolesController extends Controller
             );
     }
 
+    public function search(Request $request)
+    {
+
+        $roles = Role::where('name', 'like', '%' . $request->term . '%')->get();
+
+
+        return view('dashboard.roles.search_result', compact('roles'));
+
+    }
+
 }

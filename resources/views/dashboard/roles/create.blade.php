@@ -1,6 +1,9 @@
 @extends('layouts.dashboard')
     @section('content')
-
+    <div class="u-content">
+            <div class="u-body">
+            <h2 class="h2 font-weight-semibold mb-4">Roles</h2>
+            <div class="card mb-4">
         <div class="card">
             <header class="card-header">
 
@@ -39,4 +42,7 @@
                     {{ Form::close() }}
             </div>
         </div>
+            </div>
+            </div>
+    </div>
     @endsection

@@ -5654,6 +5654,8 @@ input[type=button].btn-block {
   padding-left: 0;
   list-style: none;
   border-radius: 0.25rem;
+  margin-top: 3%;
+  float: right;
 }
 
 .page-link {
